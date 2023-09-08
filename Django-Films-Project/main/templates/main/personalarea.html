@@ -1,0 +1,18 @@
+{% extends 'main/main.html' %}
+
+{% block body %}
+
+<div class="container profile-info">
+    <div class="first-info">
+        <h5 class="username">{{ request.user.username }}</h5>
+        <p class="username">ID: {{ request.user.userid }}</p>
+        <p class="date-join">Дата регистрации: {{ request.user.date_joined }}</p>
+        <p class="date-join last-join">Последний вход: {{ request.user.last_login }}</p>
+    </div>
+    <div class="btn-group buttons-personal" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-success"><a href="#" class="nav-link active link-profile">Сменить имя</a></button>
+        <button type="button" class="btn btn-success"><a href="{% url 'changepassword' %}" class="nav-link active link-profile">Сменить пароль</a></button>
+    </div>
+</div>
+
+{% endblock %}

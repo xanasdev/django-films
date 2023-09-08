@@ -1,0 +1,42 @@
+{% extends 'main/main.html' %}
+
+{% block body %}
+
+<div class="container" style="padding-top: 200px">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3 container" style="width: 350px; height: 50px;">
+            <div class="mb-3">
+                <label class="form-label" style="color: white; font-size: 25px;">Добавление фильма</label>
+            </div>
+            <div class="input-group input-group-sm mb-3" data-bs-theme="dark">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Название</span>
+                {{ form.film_name }}
+            </div>
+            <div class="input-group input-group-sm mb-3" data-bs-theme="dark">
+                <span class="input-group-text" id="inputGroup-sizing-ssm">URL</span>
+                {{ form.film }}
+            </div>
+            <div class="mb-3" data-bs-theme="dark">
+              <span class="input-group-text">Описание</span>
+              {{ form.film_description }}
+            </div>
+            <div class="mb-3">
+              <label class="form-label" style="color: white;">Файл фильма</label>
+              {{ form.file }}
+            </div>
+            <div class="mb-3">
+              <label class="form-label" style="color: white;">Обложка фильма</label>
+              {{ form.picture }}
+            </div>
+            <div class="mb3" data-bs-theme="dark">
+                <div style="color: white;" class="container">
+                    {{ form.errors }}
+                </div>
+                <button type="submit" class="btn btn-dark" style="margin-top: 15px;">Отправить</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

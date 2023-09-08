@@ -1,0 +1,19 @@
+{% extends 'main/main.html' %}
+
+{% block body %}
+
+<div class="container profile-info">
+    <div class="first-info">
+        <h5 class="username">Добро пожаловать, {{ request.user.username }}</h5>
+        <p class="username">ID: {{ request.user.userid }}</p>
+        <div class="btn-group buttons-personal" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-success"><a href="{% url 'add-film' %}" class="nav-link active link-profile">Добавить фильм</a></button>
+        </div>
+    </div>
+    <div class="btn-group buttons-personal" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-success"><a href="#" class="nav-link active link-profile">Сменить имя</a></button>
+        <button type="button" class="btn btn-success"><a href="{% url 'changepassword' %}" class="nav-link active link-profile">Сменить пароль</a></button>
+    </div>
+</div>
+
+{% endblock %}

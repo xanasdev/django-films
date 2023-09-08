@@ -1,0 +1,142 @@
+body{
+    background-image: url('bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    background-size: cover;
+}
+
+.backgroundblack {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(117, 190, 218, 0.5);
+}
+
+.hover_for_user::hover{
+    border-bottom: 1px solid red;
+}
+
+.profile-info {
+    margin-top: 50px;
+    width: 950px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.username {
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.first-info {
+    width: 60%;
+    height: auto;
+    padding-bottom: 270px;
+}
+
+.date-join {
+    padding-left: 10px;
+    color: white;
+    font-size: 18px;
+
+}
+
+.last-join {
+    padding-bottom: 2px;
+}
+
+.buttons-personal {
+    padding-left: 10px;
+}
+
+
+.my-carousel {
+    padding: 0;
+}
+
+.my-carousel .carousel-item {
+    display: flex;
+    width: 1200px;
+    height: 500px;
+}
+
+.my-carousel .carousel-item img {
+    margin-top: 30px;
+    margin-left: 200px;
+    object-fit: cover;
+}
+
+.film {
+    width: 232px;
+    height: 300px;
+}
+
+.images {
+    display: flex;
+    margin-left: 211px;
+}
+
+.images-items {
+    width: 232px;
+    height: 300px;
+}
+
+.image-item {
+    width: 100%;
+    height: 232px;
+    padding: 10px;
+}
+
+.box {
+    width: 650px;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 20%;
+}
+
+.coment-label {
+    color: white;
+    padding-left: 5px;
+    background-color: rgba(0,0,0,0.5);
+    font-size: 20px;
+}
+
+.comentaries {
+    width: 100%;
+    height 100%;
+    background-color: rgba(0,0,0, 0.5)
+}
+
+.text {
+    width: 650px;
+    color: white;
+}
+
+.send-comment{
+    padding: 10px;
+}
+
+.comments-area {
+    width: 100%;
+    height: 250px;
+    background: transparent;
+    color: white;
+}
+
+.comments-list {
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    height 100%;
+    background-color: rgba(0,0,0, 0.5)
+}
+
+.comments-list p {
+    padding: 15px;
+    background-color: rgba(0,0,0, 0.3)
+}

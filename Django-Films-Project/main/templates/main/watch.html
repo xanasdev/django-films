@@ -1,0 +1,31 @@
+{% extends 'main/main.html' %}
+
+{% block body %}
+    <div class="box">
+        <p style="color: white;">{{ film.film_name }}</p>
+        <p style="color: white; padding-top: 5px;">{{ film.film_description }}</p>
+        <video width="650" height="400" controls="controls">
+            <source src="{{ film.file.url }}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        </video>
+
+        <div>
+            <p class="coment-label">Комментарии</p>
+            <div class="comentaries">
+                <form method="post" class="send-comment" action="/add-comment/url?film={{ film.film }}">
+                    {% csrf_token %}
+                    <label style="color: white;">Оставьте комментарий: </label>
+                    <textarea class="comments-area" name="comment-text"></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+
+            <div class="comments-list">
+                {% for comment in comments %}
+                    <p>Комментарий: {{ comment.comment }}</p>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
